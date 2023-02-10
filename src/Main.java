@@ -20,7 +20,7 @@ public class Main {
         f1.lastName();
         f1.emailId();
         f1.password();
-
+        //&& m.group().equals(args[0])
 
     }
 }
