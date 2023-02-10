@@ -1,5 +1,5 @@
 import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.util.regex.*;
 import java.util.Scanner;
 
 public class Main {
@@ -10,8 +10,8 @@ public class Main {
         System.out.println("Enter your name:");
         String firstName = sc.next();
 
-        Matcher m = p.matcher(firstName);
-        if (m.find()) {
+        Matcher m1 = p.matcher(firstName);
+        if (m1.find()) {
             System.out.println("Valid Name");
         } else {
             System.out.println("Invalid Name");
@@ -19,7 +19,8 @@ public class Main {
         FormDetails f1 = new FormDetails();
         f1.lastName();
         f1.emailId();
-        f1.password();
+        f1.mobileFormat();
         //&& m.group().equals(args[0])
 
     }
+}

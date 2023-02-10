@@ -6,8 +6,7 @@ public class FormDetails {
     Scanner sc = new Scanner(System.in);
     Pattern p = Pattern.compile("[A-Z][a-z]*");
     Pattern p1 = Pattern.compile("abc[.][a-z]{3}@bl[.]co[.][a-z]{2}");
-
-    void lastName() {
+    void lastName(){
 
         System.out.println("Enter your last name:");
         String lastName = sc.next();
@@ -18,8 +17,8 @@ public class FormDetails {
             System.out.println("Invalid Name");
         }
     }
-
-    void emailId() {
+    void emailId()
+    {
         System.out.println("Enter your email Id:");
         String emailId = sc.next();
         Matcher m = p1.matcher(emailId);
@@ -30,17 +29,23 @@ public class FormDetails {
         }
 
     }
+    void mobileFormat(){
+        Scanner sc1 = new Scanner(System.in);
+        //Pattern p2 = Pattern.compile("^(91 )[0-9]{10}");
+        System.out.println("Enter your Mobile Number:");
+        //sc1.next();
+        String mobileNumber = sc1.nextLine();
 
-    void password() {
-        Pattern p3 = Pattern.compile("((?=.*[A-Z])(?=.*[0-9])(?=.*[^a-zA-Z0-9]){8,})");
-        System.out.println("Enter your Password:");
-        String epassword = sc.next();
-        Matcher m = p3.matcher(epassword);
-        if (m.find()) {
-            System.out.println("Valid Password");
+        //  Matcher m = p2.matcher(mobileNumber);
+        boolean output = Pattern.matches("(91 )[0-9]{10}",mobileNumber);
+        if (output == true) {
+            System.out.println("Valid Mobile Number");
         } else {
-            System.out.println("Invalid Password");
+            System.out.println("Invalid Mobile Number");
         }
+
+
+
 
 
     }
