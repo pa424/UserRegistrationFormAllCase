@@ -31,14 +31,14 @@ public class FormDetails {
     }
 
     void password(){
-        Pattern p3 = Pattern.compile("((?=.*[A-Z]){8,})");
+        Pattern p3 = Pattern.compile("((?=.*[A-Z])(?=.*[0-9]){8,})");
         System.out.println("Enter your Password:");
         String epassword = sc.next();
         Matcher m = p3.matcher(epassword);
         if (m.find()) {
             System.out.println("Valid Password");
         } else {
-            System.out.println("Invalid PasswordD");
+            System.out.println("Invalid Password");
         }
 
 
