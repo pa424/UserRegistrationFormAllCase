@@ -19,7 +19,8 @@ public class Main {
         FormDetails f1 = new FormDetails();
         f1.lastName();
         f1.emailId();
-        //&& m.group().equals(args[0])
+        f1.password();
+
 
     }
 }

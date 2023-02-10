@@ -28,6 +28,19 @@ public class FormDetails {
             System.out.println("Invalid Email ID");
         }
 
+    }
+
+    void password(){
+        Pattern p3 = Pattern.compile("[a-zA-Z0-9]{8,}");
+        System.out.println("Enter your Password:");
+        String epassword = sc.next();
+        Matcher m = p3.matcher(epassword);
+        if (m.find()) {
+            System.out.println("Valid Password");
+        } else {
+            System.out.println("Invalid PasswordD");
+        }
+
 
     }
 
