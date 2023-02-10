@@ -6,7 +6,8 @@ public class FormDetails {
     Scanner sc = new Scanner(System.in);
     Pattern p = Pattern.compile("[A-Z][a-z]*");
     Pattern p1 = Pattern.compile("abc[.][a-z]{3}@bl[.]co[.][a-z]{2}");
-    void lastName(){
+
+    void lastName() {
 
         System.out.println("Enter your last name:");
         String lastName = sc.next();
@@ -17,8 +18,8 @@ public class FormDetails {
             System.out.println("Invalid Name");
         }
     }
-    void emailId()
-    {
+
+    void emailId() {
         System.out.println("Enter your email Id:");
         String emailId = sc.next();
         Matcher m = p1.matcher(emailId);
@@ -30,7 +31,7 @@ public class FormDetails {
 
     }
 
-    void password(){
+    void password() {
         Pattern p3 = Pattern.compile("((?=.*[A-Z])(?=.*[0-9])(?=.*[^a-zA-Z0-9]){8,})");
         System.out.println("Enter your Password:");
         String epassword = sc.next();
