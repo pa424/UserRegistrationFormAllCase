@@ -9,13 +9,16 @@ public class Main {
         Pattern p = Pattern.compile("[A-Z][a-z]*");
         System.out.println("Enter your name:");
         String firstName = sc.next();
+
         Matcher m = p.matcher(firstName);
         if (m.find()) {
             System.out.println("Valid Name");
         } else {
             System.out.println("Invalid Name");
         }
-
+        FormDetails f1 = new FormDetails();
+        f1.lastName();
+        //&& m.group().equals(args[0])
 
     }
 }
